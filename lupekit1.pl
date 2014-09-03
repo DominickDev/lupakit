@@ -14,7 +14,11 @@ use warnings;
 use diagnostics;
 use feature qw/switch/;
 
-use lib '/root/script/progetti/Modules/Medik_Modules/lib';
+
+# use lib '/root/script/progetti/Modules/Medik_Modules/lib';
+# usi cosi'
+use FindBin qw/$Bin/;
+use lib $Bin.'/Modules/Lupakit_Modules/lib';
 
 require Menu;
 require Choice;
