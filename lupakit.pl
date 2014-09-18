@@ -1,56 +1,65 @@
 #!/usr/bin/perl
 
-#####
-# Script: medik.pl
-# Version: 0.1
-# Date: Agosto 2014
-# Description: administrative toolkit 
-# By: d0n1x
-# Email: donatello.caccamo@gmail.com
-#####
+#---------------------------
+# Lupakit 1.0
+# 
+# ABSTRACT:
+# Utilities for system administrator
+# 
+# Note: Expect module required
+# 
+# by Domenico Caccamo, Lucas Mateus
+# --------------------------
 
 use strict;
 use warnings;
 use diagnostics;
 use feature qw/switch/;
 
-
 # use lib '/root/script/progetti/Modules/Medik_Modules/lib';
 # usi cosi'
+# Ok, grazie! - donix
+
 use FindBin qw/$Bin/;
 use lib $Bin.'/Modules/Lupakit_Modules/lib';
 
 require Menu;
 require Choice;
 require Genpass;
-require Equazioni;
+require Equations;
+require File_Insert;
+require File_Replace;
+#require File_Report;
 #require Change;
 #require Execution;
 #require Expect; 
-require Insert;
 #require Messages
-#require Report;
 
 Menu::menu_principale();
-
-#Messages:print "$message{offerta}\n";
     
 Choice::choice_menu_principale();
 
 
-# === Generic Code Structure ===
 
+
+
+#Messages:print "$message{offerta}\n";
+
+
+
+
+#----General Memorandum Structure Code-----
+#
 # Vars: Input, Output  
 # Vars Sub: Input, Output (return code) 
 # Hash/Array: Messages 
 # Sub: User Interface (menu)
 # Sub: Validate Input
 # Sub: Print Report 
-# Sub: Class Clone (optional)
-# Class: POE (optional)
+# Sub: OOP clone (optional)
+# Class: OOP (optional)
 # Subroutine 
 # Code 
-
-# ==============================
+#-------------------------------------------
 
 exit;

@@ -1,35 +1,27 @@
-use strict;
-use warnings;
+#!/usr/bin/perl;
 
 package Expect;
 
-sub my_expect {
-#!/usr/bin/perl -w
+sub expect_ssh_copy_key {
 
-#Description: Change default password to remote linux hosts
+    use Expect;
 
-use strict;
-use Expect;
+    #$Expect::Debug = 1;
 
-#$Expect::Debug = 1;
-my $timeout = '30';
-my $username = 'pippo';
-my $oldpass = 'password_default';
-my $newpass = 'Gtn_547_0ghr';
+    my $timeout = '30';
+    my $username = 'pippo';
+    my $oldpass = 'password_default';
+    my $newpass = 'Gtn_547_0ghr';
 
-open(HOSTS,"hosts.txt")
-            or die "Error while opening file:$!\n";
-            chomp( my @hosts = <HOSTS> );
-close(HOSTS)
-            or die "Error while closing file:$!\n";
+    Readlist::read_host();
 
-foreach (@hosts) {
-my $exp = Expect->spawn("ssh -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $username\@$_")
-    or die "Cannot spawn ssh: $!\n";
+    foreach (@hosts) {
+    my $exp = Expect->spawn("ssh -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $username\@$_")
+        or die "Cannot spawn ssh: $!\n";
 
-my $spawn_ok;
+    my $spawn_ok;
 
-$exp->expect($timeout,
+    $exp->expect($timeout,
              [ qr /\@.*password: $/ => sub {
                                 $spawn_ok = 1;
                                 my $expect = shift;

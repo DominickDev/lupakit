@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
-package Equazioni;
+package Equations;
 
-sub equazioni_fibonacci {
+sub fibonacci {
 
     # Serie di Fibonacci (attenzione !!! code in progress...)
     

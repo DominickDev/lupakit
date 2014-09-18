@@ -7,22 +7,30 @@ sub menu_principale {
 
 my $menu = << "MAIN_MENU";
     
-    ========  medik 0.1 ========
+    ---------  LUPAKIT 1.0 ---------------
 
-               by d0n1x                   
+    (1)   Password Generator
     
-    1)  Password Generator
-    2)  Equazioni: Serie di Fibonacci
-    3)  Insert Hosts
-    4)  Change remote password 
-    5)  Copy remote key (SSH) 
-    6)  Create Remote User
-    7)  Remove Remote User
-    8)  Insert Script
-    9) Execution remote script
-    10) Stampa Report
+    (2)   Equazioni: Serie di Fibonacci
+         
+          Hosts List:
+          
+          (I)nsert (R)eplace 
+          
+          (D)elete <-in progress 
+          
+    (3)   Change Remote Password  <-in progress
+    (4)   Copy   Remote Key (SSH) <-in progress
+    (5)   Create Remote User      <-in progress
+    (6)   Remove Remote User      <-in progress
+    
+    (7)   Insert SCRIPT           <-in progress
+    (8)   Execution Remote SCRIPT <-in progress
+    (9)   Report Remote SCRIPT    <-in progress
 
-    ============================
+    
+                         by d0n1x, luma
+    -------------------------------------
 
 MAIN_MENU
 
