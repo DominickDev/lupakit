@@ -33,7 +33,7 @@ sub expect_copy_key {
 
     Readlist::read_host();
 
-    my $exp = Expect->spawn("ssh-copy-id -i -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $username\@$hostname")
+    my $exp = Expect->spawn("ssh-copy-id -i $username\@$hostname")
         or die "Cannot spawn ssh: $!\n";
 
     my $spawn_ok;
