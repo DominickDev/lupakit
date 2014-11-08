@@ -1,10 +1,10 @@
 #!/usr/bin/perl
 
-package Readlist;
+package Leggi_lista;
 
 
 
-sub read_hosts {
+sub hosts {
     
     my $file = "./hosts.txt";
 
@@ -20,13 +20,6 @@ sub read_hosts {
     open my $lista, ">", $file
         or die "Errore: $!";
 }
-
-#sub read_xxx {
-
-
-#}
-
-
 
 
 

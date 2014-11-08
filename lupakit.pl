@@ -11,9 +11,9 @@
 # by Domenico Caccamo, Lucas Mateus
 # --------------------------
 
-use strict;
-use warnings;
-use diagnostics;
+#use strict;
+#use warnings;
+#use diagnostics;
 use feature qw/switch/;
 
 # use lib '/root/script/progetti/Modules/Medik_Modules/lib';
@@ -25,12 +25,14 @@ use lib $Bin.'/Modules/Lupakit_Modules/lib';
 
 require Menu;
 require Choice;
-require Genpass;
-require Equations;
-require File_Insert;
-require File_Replace;
+require Accesso;
+require Leggi;
+require Crea;
+#require Equations;
+#require File_Insert;
+#require File_Replace;
 #require File_Report;
-#require Change;
+require Change;
 #require Execution;
 #require Expect; 
 #require Messages

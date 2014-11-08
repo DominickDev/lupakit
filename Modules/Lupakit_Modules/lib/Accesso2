@@ -2,21 +2,38 @@
 
 package Expect;
 
-sub expect_ssh_copy_key {
+use Expect;
+#$Expect::Debug = 1;
+use strict;
+use warnings;
 
-    use Expect;
+sub copy_key {
 
-    #$Expect::Debug = 1;
+    #---------------------------------------------
+    #
+    # ABSTRACT:
+    # Copy SSH pubblic key on remote host by automatic login.
+    # Bundle::Expect module is required!.
+    #
+    #---------------------------------------------
 
+    #-----------------------------------------------
+    #INPUT
     my $timeout = '30';
-    my $username = 'pippo';
+    
+    #Questi parametri verranno letti in futuro da un file locale secret.txt...in progress
+    my ($username,  = 'pippo';
     my $oldpass = 'password_default';
     my $newpass = 'Gtn_547_0ghr';
+    
+    #PROCESS
+
+    #OUTPUT
+    #------------------------------------------------
 
     Readlist::read_host();
 
-    foreach (@hosts) {
-    my $exp = Expect->spawn("ssh -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $username\@$_")
+    my $exp = Expect->spawn("ssh-copy-id -i $username\@$hostname")
         or die "Cannot spawn ssh: $!\n";
 
     my $spawn_ok;
@@ -48,8 +65,9 @@ sub expect_ssh_copy_key {
 
         '-re', qr'[#>:] $', #' wait for shell prompt, then exit expect
         );
-        }
+        
 
 
 }
+
 1;

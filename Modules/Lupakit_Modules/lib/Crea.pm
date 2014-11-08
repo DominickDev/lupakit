@@ -1,28 +1,24 @@
 #!/usr/bin/perl
 
-package File_Insert;
+package Crea;;
 
 #---------------------------------------------------
 # ABSTRACT: 
-# 
-# Subroutines per inserimento dati INPUT e scrittura/salvataggio file
+# Creazione lista hosts in modalità append (file hosts.txt) 
 #-----------------------------------------------------
 
 use strict;
 use warnings;
 
-sub insert_hosts_list {
+sub lista_hosts {
 
     #INPUT: 
-    my $filename_hosts = "./hosts.txt";
+    my $host;
     my $flag_input = "n"; 
 
-    #PROCESS:
-
     #OUTPUT:
-    my $host;
+    my $filename_hosts = "./hosts.txt";
 
-    #Creazione nuovo file hosts.txt. Attenzione! code in progress...(only APPEND)
     open my $FH_WRITE_LISTA_HOSTS, ">$filename_hosts" or die "Errore: $!";
     
         #Istruzioni su schermo:
@@ -52,15 +48,6 @@ sub insert_hosts_list {
     close $FH_WRITE_LISTA_HOSTS;
 
 }
-
-
-#sub insert_script {
-
-#...
-
-#}
-
-
 
 
 

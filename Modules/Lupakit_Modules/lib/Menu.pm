@@ -9,23 +9,19 @@ my $menu = << "MAIN_MENU";
     
    +-------------  LUPAKIT 1.0 ------------------+
 
-    (1)   Password Generator
     
-    (2)   Equazioni: Serie di Fibonacci
-         
-          Hosts List:
-          (i)nsert (r)eplace (d)elete 
+        
+    (1)   Inserisci lista hosts
           
-    (3)   Change Remote Password  <-in progress
-    (4)   Copy   Remote Key (SSH) <-in progress
-    (5)   Create Remote User      <-in progress
-    (6)   Remove Remote User      <-in progress
+    (2)   Cambia password scaduta 
     
-    (7)   Insert SCRIPT           <-in progress
-    (8)   Execution Remote SCRIPT <-in progress
-    (9)   Report Remote SCRIPT    <-in progress
+    (3)   Copia chiave ssh  
+    
+    (4)   Generazione nuova password
 
-    
+    (5)   Equazioni: Serie di Fibonacci
+
+
                                     by d0n1x, luma
    +----------------------------------------------+
 
@@ -35,4 +31,15 @@ print "\n$menu\n";
 
 }
 
+#    (5)   Create Remote User      
+#    
+#    (6)   Remove Remote User    
+    
+#    (7)   Insert SCRIPT          
+    
+#    (8)   Execution Remote SCRIPT 
+    
+#    (9)   Report Remote SCRIPT    
+
+    
 1;
