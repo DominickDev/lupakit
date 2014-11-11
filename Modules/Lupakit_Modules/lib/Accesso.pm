@@ -2,13 +2,13 @@
 
 package Accesso;
 
-sub hosts {
+sub cambia_password {
 
     use Expect;
 
-    #$Expect::Debug = 1;
+    $Expect::Debug = 1;
 
-    my ($username, $oldpass, $newpass, $host) = shift;;
+    my ($username, $oldpass, $newpass, $host) = @_;
 
     my $timeout = '30';
 

@@ -6,8 +6,8 @@ package Change;
 sub ciclo_cambia_password {
 
 	my $username  = 'pippo';
-	my $oldpass = 'password';
-	my $newpass = 'Caccamus!!!...';
+	my $oldpass = 'perlfatutto';
+	my $newpass = 'adessosonobravo';
 
 
 	#Popolamento @hosts da hosts.txt:
