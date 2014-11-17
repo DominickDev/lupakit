@@ -2,17 +2,19 @@
 
 package Accesso;
 
-sub cambia_password {
-
-    use Expect;
-
+    use Bundle::Expect;
     $Expect::Debug = 1;
 
-    my ($username, $oldpass, $newpass, $host) = @_;
+
+sub cambia_password {
+
+
+    my ($username, $oldpass, $newpass, $host) = shift;
 
     my $timeout = '30';
 
     #Collegamento SSH a $host e cambio password scaduta con una nuova:
+    
     my $exp = Expect->spawn("ssh -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $username\@$host")
         or die "Cannot spawn ssh: $!\n";
 
