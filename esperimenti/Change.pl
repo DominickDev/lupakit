@@ -1,13 +1,13 @@
 #!/usr/bin/perl
 
-#use lib $Bin.'/Modules/lib/';
-#use FindBin qw/$Bin/;
+use lib $Bin.'/Modules/lib/';
+use FindBin qw/$Bin/;
 
-use 5.20.1;
+#use 5.20.1;
 
 use lib '/home/donix/script/progetti/lupakit/esperimenti/Modules/lib';
 
-use Accesso;
+require Accesso;
 
 
 	my $username  = 'pippo';

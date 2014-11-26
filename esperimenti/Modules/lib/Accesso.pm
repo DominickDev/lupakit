@@ -2,7 +2,7 @@
 
 package Accesso;
     use Expect;
-    $Expect::Debug = 1;
+#    $Expect::Debug = 1;
     use strict;
     use warnings;
 
@@ -11,7 +11,7 @@ sub cambia_password {
 #    use Expect;
 
 
-    my ($username, $oldpass, $newpass, $host) = shift;
+    my ($username, $oldpass, $newpass, $host) = @_;
 
     my $timeout = '30';
 
