@@ -25,19 +25,19 @@ sub cambia_password {
              [ qr /\@.*password: $/ => sub {
                                 $spawn_ok = 1;
                                 my $expect = shift;
-                                $expect->send("${oldpass}\n");
+                                $expect->send("$oldpass\n");
                                 exp_continue;} ],
              [ qr /\(current\) UNIX password:/ => sub {
                                 my $expect = shift;
-                                $expect->send("${oldpass}\n");
+                                $expect->send("$oldpass\n");
                                 exp_continue;} ],
              [ qr /New password:/ => sub {
                                 my $expect = shift;
-                                $expect->send("${newpass}\n");
+                                $expect->send("$newpass\n");
                                 exp_continue;} ],
              [ qr /Retype new password:/ => sub {
                                 my $expect = shift;
-                                $expect->send("${newpass}\n");
+                                $expect->send("$newpass\n");
                                 exp_continue;}],
         [ eof => sub {
                 if ($spawn_ok) {
